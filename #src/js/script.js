@@ -154,14 +154,25 @@ jQuery(function ($) {
 			$('.burger').toggleClass('burger-active');
 			$('.nav-header').toggleClass('nav-header__active');
 		});
+
+
+		$('.header__theme').on('click', function(e) {
+			e.preventDefault();
+			$('body').toggleClass('dark');
+		});
+
+		if (typeof data !== 'undefined' && data) {
+
+			insertData();
+
+		}
+
+		$('title').html(titlePage);
+
+
+
+
+
 	});
-
-	if (typeof data !== 'undefined' && data) {
-
-		insertData();
-
-	}
-
-	$('title').html(titlePage);
 
 });
