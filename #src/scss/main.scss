@@ -1,0 +1,94 @@
+.main {
+	margin: 0 auto;
+	padding: 40px 10px;
+	max-width: 1200px;
+
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@media only screen and (max-width: 1200px) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__top-title {
+		h1 {
+			font-size: 40px;
+		}
+	}
+
+	&__top-search {
+		.search-input {
+			margin: 1rem 0;
+			outline-color: rgb(0, 187, 0);
+			border: none;
+			border-radius: 5px;
+			padding: 1rem;
+			width: 100%;
+			font-weight: 700;
+			font-size: 2rem;
+			background: rgb(246, 247, 249);
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 20px;
+
+		@media only screen and (max-width: 1200px) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__bottom-item {
+		a {
+			font-size: 20px;
+			color: $white;
+		}
+
+		&.text {
+			max-width: 700px;
+			font-size: 20px;
+			color: $tuatara;
+
+			@media only screen and (max-width: 1200px) {
+				max-width: 100%;
+			}
+		}
+	}
+
+	&__wrapper-list {
+		display: grid;
+		align-items: start;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		margin-top: 20px;
+		// padding: 10px;
+		gap: 10px 25px;
+	}
+
+	&__wrapper-item {
+		display: grid;
+		align-items: center;
+		grid-template-columns: 1fr auto;
+		padding: 5px;
+		font-size: 1.75rem;
+
+		svg {
+			width: 18px;
+			fill: $white;
+		}
+
+		.link {
+			font-size: 18px;
+			color: $white;
+		}
+
+		small {
+			font-size: 14px;
+		}
+	}
+}

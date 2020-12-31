@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('blocks/template/_meta.html')
+</head>
+
+<body>
+	@@include('blocks/template/_header.html')
+
+	@@include('blocks/template/_main.html')
+
+	@@include('blocks/template/_footer.html')
+
+	<script>
+		var titlePage = "All the tags! Hacker Noon";
+
+		var data = [
+			{
+				tagName: 'blockchain',
+				tagLink: '/tagged/blockchain',
+				tagTotal: '6&nbsp;594'
+			},
+			{
+				tagName: 'cryptocurrency',
+				tagLink: '/tagged/cryptocurrency',
+				tagTotal: '5&nbsp;146'
+			},
+			{
+				tagName: 'programming',
+				tagLink: '/tagged/programming',
+				tagTotal: '4&nbsp;110'
+			},
+			{
+				tagName: 'bitcoin',
+				tagLink: '/tagged/bitcoin',
+				tagTotal: '4&nbsp;089'
+			},
+			{
+				tagName: 'startup',
+				tagLink: '/tagged/startup',
+				tagTotal: '4&nbsp;065'
+			},
+			{
+				tagName: 'hackernoon-top-story',
+				tagLink: '/tagged/hackernoon-top-story',
+				tagTotal: '3&nbsp;757'
+			},
+			{
+				tagName: 'software-development',
+				tagLink: '/tagged/software-development',
+				tagTotal: '3&nbsp;631'
+			},
+		]
+	</script>
+	<script src="js/libs.min.js"></script>
+	<script src="js/script.min.js"></script>
+</body>
+
+</html>
