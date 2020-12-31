@@ -635,6 +635,8 @@ a {
 }
 
 .header {
+    position: fixed;
+    width: 100%;
     background-color: #0b0;
 }
 
@@ -777,6 +779,10 @@ a {
 }
 
 .main {
+    padding-top: 100px;
+}
+
+.main__inner {
     margin: 0 auto;
     padding: 40px 10px;
     max-width: 1200px;
@@ -967,5 +973,9 @@ a {
 
     .header__bottom {
         display: none;
+    }
+
+    .main {
+        padding-top: 50px;
     }
 }
