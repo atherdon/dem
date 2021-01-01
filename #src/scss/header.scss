@@ -1,4 +1,6 @@
 .header {
+	position: fixed;
+	width: 100%;
 	background-color: $green-tagged-header;
 
 	&__top {
@@ -87,11 +89,16 @@
 		width: 60px;
 		height: 60px;
 		background-color: $japanese-laurel;
+		cursor: pointer;
 
 		svg {
 			width: 30px;
 			height: 30px;
 		}
+	}
+
+	&__theme-dark {
+		display: none;
 	}
 
 	&__bottom {
@@ -112,11 +119,14 @@
 	&__menu-item {
 		padding: 0 10px;
 		line-height: 43px;
+		color: $white;
 	}
 }
 
 .burger__menu {
+	display: none;
 	padding: 0 10px;
+
 
 	.burger {
 		background-color: $tuatara;

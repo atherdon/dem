@@ -1,7 +1,15 @@
 .main {
-	margin: 0 auto;
-	padding: 40px 10px;
-	max-width: 1200px;
+	padding-top: 100px;
+
+	@media only screen and (max-width: 700px) {
+		padding-top: 50px;
+	}
+	
+	&__inner {
+		margin: 0 auto;
+		padding: 40px 10px;
+		max-width: 1200px;
+	}
 
 	&__top {
 		display: flex;
@@ -47,7 +55,17 @@
 	&__bottom-item {
 		a {
 			font-size: 20px;
-			color: $white;
+			//color: $white;
+		}
+
+		&.looking {
+			display: flex;
+			justify-content: flex-end;
+			width: 100%;
+
+			@media only screen and (max-width: 1200px) {
+				margin-top: 10px;
+			}
 		}
 
 		&.text {
@@ -79,12 +97,11 @@
 
 		svg {
 			width: 18px;
-			fill: $white;
 		}
 
 		.link {
 			font-size: 18px;
-			color: $white;
+			//color: $white;
 		}
 
 		small {

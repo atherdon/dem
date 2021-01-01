@@ -7,8 +7,46 @@
 body {
 	font-family: "JBM-Regular";
 	font-size: 14px;
-	color: $white;
-	background-color: $shark;
+	transition: all 0.2s linear;
+
+	svg {
+		fill: $tuatara;
+		transition: all 0.2s linear;
+	}
+
+	a {
+		color: $tuatara;
+		transition: all 0.2s linear;
+	}
+
+	&.dark {
+		color: $white;
+		background-color: $shark;
+		transition: all 0.2s linear;
+
+		svg {
+			fill: $white;
+			transition: all 0.2s linear;
+		}
+
+		a {
+			color: $white;
+			transition: all 0.2s linear;
+		}
+
+		.footer {
+			background-color: $tuatara;
+			transition: all 0.2s linear;
+		}
+
+		.header__theme-bright {
+			display: none;
+		}
+
+		.header__theme-dark {
+			display: block;
+		}
+	}
 }
 
 h1,
@@ -31,7 +69,6 @@ li {
 a {
 	text-decoration: none;
 }
-
 
 .btn {
 	display: flex;
