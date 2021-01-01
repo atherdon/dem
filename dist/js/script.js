@@ -144,6 +144,56 @@ function insertData() {
 }
 
 
+function insertCardData() {
+
+	var insertCardData = "";
+
+	for (i = 0; i < cardData.length; i++) {
+
+		//console.log(data[i].link);
+
+		insertCardData += `
+		<li class="card">
+			<div class="title-wrapper">
+				<h2>
+					<a href="${cardData[i].storyLink}">${cardData[i].storyTitle}</a>
+				</h2>
+			</div>
+
+			<div class="card-reactions"></div>
+			<div class="image-wrapper">
+				<a href="${cardData[i].storyLink}">
+					<img alt="" src="${cardData[i].storyImage}" width="379"
+						height="200" loading="lazy"></a>
+				<div class="tag">
+					<a href="/tagged/${cardData[i].tag}" class="tag-link">#${cardData[i].tag}</a>
+				</div>
+			</div>
+
+			<div class="meta">
+				<div class="profile">
+					<a href="${cardData[i].authorLink}">
+						<img src="${cardData[i].authorImage}"
+							alt="Author profile picture" width="50" height="50" loading="lazy">
+					</a>
+					<div>
+						<h3>
+							<a class="link" href="${cardData[i].authorLink}" class="">@${cardData[i].authorNickname}</a>
+							<small>${cardData[i].authorName}</small>
+						</h3>
+					</div>
+				</div>
+				<div class="time">
+					<div>${cardData[i].time}</div>
+					<div class="date">${cardData[i].date}</div>
+				</div>
+			</div>
+		</li>`
+	}
+
+	$('.main__wrapper-list').html(insertCardData);
+}
+
 
 jQuery(function ($) {
 	$(document).ready(function () {
@@ -156,7 +206,7 @@ jQuery(function ($) {
 		});
 
 
-		$('.header__theme').on('click', function(e) {
+		$('.header__theme').on('click', function (e) {
 			e.preventDefault();
 			$('body').toggleClass('dark');
 		});
@@ -164,6 +214,12 @@ jQuery(function ($) {
 		if (typeof data !== 'undefined' && data) {
 
 			insertData();
+
+		}
+
+		if (typeof cardData !== 'undefined' && cardData) {
+
+			insertCardData();
 
 		}
 
