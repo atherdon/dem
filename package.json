@@ -48,7 +48,7 @@
     "chart.js": "^2.9.4",
     "chokidar": "^3.4.3",
     "gulp-sass-error": "^1.0.5",
-    "gulp-sourcemaps": "^2.6.5",
+    "gulp-sourcemaps": "^3.0.0",
     "nouislider": "^14.6.2",
     "postcss": "^8.2.1",
     "pro-gallery": "^2.4.1",
