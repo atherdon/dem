@@ -147,10 +147,15 @@ function insertData() {
 function insertCardData() {
 
 	var insertCardData = "";
+	var totalReaction = "";
 
 	for (i = 0; i < cardData.length; i++) {
 
 		//console.log(data[i].link);
+
+		if (cardData[i].totalReactions) {
+			totalReaction = '<div class="card-reactions">' + cardData[i].totalReactions + ' reactions</div>';
+		}
 
 		insertCardData += `
 		<li class="card">
@@ -160,7 +165,7 @@ function insertCardData() {
 				</h2>
 			</div>
 
-			<div class="card-reactions"></div>
+			${totalReaction}
 			<div class="image-wrapper">
 				<a href="${cardData[i].storyLink}">
 					<img alt="" src="${cardData[i].storyImage}" width="379"

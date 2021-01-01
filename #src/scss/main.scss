@@ -124,4 +124,129 @@
 			font-size: 14px;
 		}
 	}
+
+	.stories {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 40px;
+		font-weight: 900;
+		font-size: 24px;
+		text-align: center;
+		text-transform: uppercase;
+
+		&::after,
+		&::before {
+			content: "";
+			flex: 1 1 0%;
+			border-bottom: 3px solid rgb(60, 60, 59);
+		}
+
+		&::after {
+			margin-left: 30px;
+		}
+
+		&::before {
+			margin-right: 30px;
+		}
+	}
+
+	.bio-sections {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.bio-section {
+		display: flex;
+		width: 48%;
+
+		@media only screen and (max-width: 815px) {
+			width: 100%;
+		}
+
+		small {
+			padding-top: 5px;
+			font-weight: 900;
+			font-size: 18px;
+			color: $periwinkle-gray;
+		}
+	}
+
+	.bio-text {
+		margin-top: 10px;
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	.social {
+		margin-top: 10px;
+	}
+
+	.avatar {
+		margin-right: 25px;
+		width: 150px;
+		height: 150px;
+		min-width: 150px;
+		min-height: 150px;
+		box-shadow: rgb(194, 202, 214) 0px 8px, rgb(194, 202, 214) 0px -8px, rgb(194, 202, 214) 8px 0px,
+			rgb(194, 202, 214) -8px 0px;
+
+		@media only screen and (max-width: 414px) {
+			width: 75px;
+			height: 75px;
+			min-width: 75px;
+			min-height: 75px;
+		}
+	}
+
+	.divider {
+		margin: 15px;
+		width: 2px;
+		min-width: 2px;
+		background: rgb(194, 202, 214);
+
+		@media only screen and (max-width: 815px) {
+			display: none;
+		}
+	}
+
+	.reading-time {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 48%;
+
+		@media only screen and (max-width: 815px) {
+			margin-top: 10px;
+			width: 100%;
+		}
+	}
+
+	.label {
+		text-align: center;
+		font-size: 18px;
+		line-height: 28px;
+	}
+
+	u {
+		position: relative;
+		text-decoration: none;
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: -3px;
+			height: 4px;
+			background: linear-gradient(
+				90deg,
+				rgb(255, 129, 0),
+				rgb(255, 248, 36),
+				rgb(138, 255, 138),
+				rgb(10, 187, 255),
+				rgb(204, 61, 230)
+			);
+		}
+	}
 }
