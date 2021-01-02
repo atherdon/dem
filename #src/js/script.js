@@ -121,7 +121,7 @@ function insertData() {
 		insertData += `
 		<li class="main__wrapper-item">
 				<div>
-					<a class="link" href="${data[i].tagLink}">
+					<a class="link" href="https://hackernoon.com${data[i].tagLink}">
 					${data[i].tagName}
 					
 					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 283.922 283.922">
@@ -147,22 +147,27 @@ function insertData() {
 function insertCardData() {
 
 	var insertCardData = "";
+	var totalReaction = "";
 
 	for (i = 0; i < cardData.length; i++) {
 
 		//console.log(data[i].link);
 
+		if (cardData[i].totalReactions) {
+			totalReaction = '<div class="card-reactions"><div class="emojis">' + cardData[i].totalReactions + '</div></div>';
+		}
+
 		insertCardData += `
 		<li class="card">
 			<div class="title-wrapper">
 				<h2>
-					<a href="${cardData[i].storyLink}">${cardData[i].storyTitle}</a>
+					<a href="https://hackernoon.com${cardData[i].storyLink}">${cardData[i].storyTitle}</a>
 				</h2>
 			</div>
 
-			<div class="card-reactions"></div>
+			${totalReaction}
 			<div class="image-wrapper">
-				<a href="${cardData[i].storyLink}">
+				<a href="https://hackernoon.com${cardData[i].storyLink}">
 					<img alt="" src="${cardData[i].storyImage}" width="379"
 						height="200" loading="lazy"></a>
 				<div class="tag">
@@ -172,13 +177,13 @@ function insertCardData() {
 
 			<div class="meta">
 				<div class="profile">
-					<a href="${cardData[i].authorLink}">
+					<a href="https://hackernoon.com${cardData[i].authorLink}">
 						<img src="${cardData[i].authorImage}"
 							alt="Author profile picture" width="50" height="50" loading="lazy">
 					</a>
 					<div>
 						<h3>
-							<a class="link" href="${cardData[i].authorLink}" class="">@${cardData[i].authorNickname}</a>
+							<a class="link" href="https://hackernoon.com${cardData[i].authorLink}" class="">@${cardData[i].authorNickname}</a>
 							<small>${cardData[i].authorName}</small>
 						</h3>
 					</div>
