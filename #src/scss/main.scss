@@ -125,32 +125,7 @@
 		}
 	}
 
-	.stories {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin-top: 40px;
-		font-weight: 900;
-		font-size: 24px;
-		text-align: center;
-		text-transform: uppercase;
-
-		&::after,
-		&::before {
-			content: "";
-			flex: 1 1 0%;
-			border-bottom: 3px solid rgb(60, 60, 59);
-		}
-
-		&::after {
-			margin-left: 30px;
-		}
-
-		&::before {
-			margin-right: 30px;
-		}
-	}
-
+	
 	.bio-sections {
 		display: flex;
 		flex-wrap: wrap;
@@ -255,5 +230,31 @@
 		font-weight: 900;
 		font-size: 24px;
 		text-align: center;
+	}
+}
+
+.stories {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 40px;
+	font-weight: 900;
+	font-size: 24px;
+	text-align: center;
+	text-transform: uppercase;
+
+	&::after,
+	&::before {
+		content: "";
+		flex: 1 1 0%;
+		border-bottom: 3px solid rgb(60, 60, 59);
+	}
+
+	&::after {
+		margin-left: 30px;
+	}
+
+	&::before {
+		margin-right: 30px;
 	}
 }
